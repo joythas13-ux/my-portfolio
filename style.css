@@ -1,0 +1,188 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0b0b0b;
+  color:white;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:5px 60px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(15px);
+  z-index:1000;
+}
+
+nav h1{color:#f5c518;}
+
+nav ul{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+}
+
+nav ul li a:hover{color:#f5c518;}
+
+.menu-btn{
+  display:none;
+  font-size:25px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 100px;
+}
+
+.hero-text h2{color:#f5c518;
+font-size:40px;
+
+}
+.hero-text h1{font-size:40px;}
+
+.btn{
+  padding:4px,30px;
+  border:1px solid #f5c518;
+  color:#f5c518;
+  text-decoration:none;
+  border-radius:4px;
+  margin-right:10px;
+}
+
+.btn:hover{
+  background:#f5c518;
+  color:black;
+}
+
+.hero img{
+  width:380px;
+  border-radius:30px;
+  box-shadow:0 0 60px rgba(255, 238, 0, 0.596);
+}
+
+/* SECTIONS */
+section{padding:100px 80px;}
+
+.about{
+  display:flex;
+  gap:50px;
+  align-items:center;
+}
+
+.about img{width:280px;}
+
+.bar{
+  background:#222;
+  height:8px;
+  border-radius:5px;
+}
+
+.fill{
+  background:#f5c518;
+  height:100%;
+}
+
+/* PORTFOLIO */
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  justify-content:center;
+}
+
+.gallery img{
+  width:260px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* SERVICES */
+.service-box{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card{
+  border:1px solid #222;
+  padding:30px;
+  width:220px;
+  border-radius:10px;
+}
+
+.card:hover{
+  border-color:#f5c518;
+}
+
+/* CONTACT */
+.contact{text-align:center;
+
+font-size:15px;
+}
+
+footer{
+  text-align:center;
+  padding:15px;
+  color:#777;
+}
+
+/* 🔥 RESPONSIVE */
+@media(max-width:900px){
+
+  nav ul{
+    position:absolute;
+    top:70px;
+    right:0;
+    background:#111;
+    flex-direction:column;
+    width:200px;
+    display:none;
+  }
+
+  nav ul.active{
+    display:flex;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero img{
+    margin-top:20px;
+    width:250px;
+  }
+
+  .about{
+    flex-direction:column;
+    text-align:center;
+  }
+}
